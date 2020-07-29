@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* estilo definiciones */
+/* variables color */
+/* variables tipografía */
+/*Estilo pagina*/
+body {
+  margin: 0;
+}
+
+body main {
+  margin: 0;
+}
+
+body main #app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main #app .definiciones {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 17px;
+}
+
+body main #app .titulos {
+  color: #555555;
+}
+/*# sourceMappingURL=definiciones.css.map */

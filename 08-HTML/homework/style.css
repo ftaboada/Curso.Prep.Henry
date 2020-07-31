@@ -1,0 +1,29 @@
+h1 {
+  color: orangered;
+}
+#thirdDiv {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 500px;
+  padding: 50px;
+  background-color: orangered;
+  border: 5px dotted black;
+}
+ul {
+}
+img {
+  width: 400px;
+}
+#spanId {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  margin: 50px;
+  padding: 50px;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url(https://scontent.fscl1-1.fna.fbcdn.net/v/t1.0-9/58591341_2205361646221688_7640078587097251840_n.png?_nc_cat=103&_nc_sid=e3f864&_nc_ohc=LxZ6nyfAe20AX-2YnOQ&_nc_ht=scontent.fscl1-1.fna&oh=bb798646d5b149ab816897def40f8511&oe=5F492A19);
+}

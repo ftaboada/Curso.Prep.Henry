@@ -37,14 +37,20 @@ const descripcionresArray = [
   "los constructores de clases son creadores de objetos. es el plano con el que se creará una misma clase de objetos una y otra vez.",
 ];
 let color;
-const hexCode = "cdef";
+let displayDescripcion = false;
+const hexCode = "8cdff";
 let hexCodeLen = hexCode.length;
 let defArrLen = definicionesArray.length;
 creategrid();
 let htmlDivs = Array.from(document.querySelectorAll(".definiciones"));
 writeInDivs();
 bkcolor();
-
+descriptionDivs();
+let descripcionesDivsArray = Array.from(
+  document.querySelectorAll(".descripciones")
+);
+writeDescripciones();
+addClickE();
 function bkcolor() {
   hexGenerator();
   html.style.backgroundColor = color;
@@ -53,7 +59,7 @@ function creategrid() {
   for (let i = 0; i < defArrLen; i++) {
     let div = document.createElement("div");
     div.className = "definiciones";
-    div.id = definicionesArray[i];
+    div.id = i;
     hexGenerator();
     div.style.backgroundColor = color;
     html.appendChild(div);
@@ -78,6 +84,32 @@ function hexGenerator() {
 function addClickE() {
   for (let i = 0; i < defArrLen; i++) {
     let current = htmlDivs[i];
-    current.addEventListener("click");
+    current.addEventListener("click", function () {
+      if (displayDescripcion === false) {
+        displayDescripcion = true;
+        descripcionesDivsArray[i].style.display = "block";
+      } else if (displayDescripcion === true) {
+        displayDescripcion = false;
+        descripcionesDivsArray[i].style.display = "none";
+      }
+    });
+  }
+}
+function descriptionDivs() {
+  for (let i = 0; i < defArrLen; i++) {
+    let descriptionDiv = document.createElement("div");
+    descriptionDiv.className = "descripciones";
+    descriptionDiv.id = i;
+    descriptionDiv.style.display = "none";
+    html.appendChild(descriptionDiv);
+  }
+}
+function writeDescripciones() {
+  for (let i = 0; i < defArrLen; i++) {
+    let divs = descripcionesDivsArray[i];
+    let p = document.createElement("p");
+    p.className = "texto";
+    p.innerText = descripcionresArray[i];
+    divs.appendChild(p);
   }
 }

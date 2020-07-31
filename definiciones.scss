@@ -1,6 +1,10 @@
 /* estilo definiciones */
 /* variables color */
+$fontColor: #555555;
 /* variables tipografía */
+$fontFamily: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+$fontTitleSize: 17px;
 /*Estilo pagina*/
 body {
   margin: 0;
@@ -13,12 +17,11 @@ body {
       width: 100vw;
       justify-content: space-evenly;
       .definiciones {
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-        font-size: 17px;
+        font-family: $fontFamily;
+        font-size: $fontTitleSize;
       }
       .titulos {
-        color: #555555;
+        color: $fontColor;
       }
     }
   }
